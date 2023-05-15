@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "avatar": "https://loremflickr.com/300/300",
+    "username": "Josh"
+  },
+  {
+    "id": "2",
+    "avatar": "https://loremflickr.com/300/300",
+    "username": "Andrew"
+  },
+  {
+    "id": "3",
+    "avatar": "https://loremflickr.com/300/300",
+    "username": "Camille"
+  },
+  {
+    "id": "4",
+    "avatar": "https://loremflickr.com/300/300",
+    "username": "Marselle"
+  },
+  {
+    "id": "5",
+    "avatar": "https://loremflickr.com/300/300",
+    "username": "Piter"
+  },
+  {
+    "id": "6",
+    "avatar": "https://loremflickr.com/300/300",
+    "username": "Can"
+  },
+  {
+    "id": "7",
+    "avatar": "https://loremflickr.com/300/300",
+    "username": "Iloveanime"
+  },
+  {
+    "id": "8",
+    "avatar": "https://loremflickr.com/300/300",
+    "username": "Diself"
+  },
+  {
+    "id": "9",
+    "avatar": "https://loremflickr.com/300/300",
+    "username": "Gartor"
+  },
+  {
+    "id": "10",
+    "avatar": "https://loremflickr.com/300/300",
+    "username": "Camilr"
+  }
+]

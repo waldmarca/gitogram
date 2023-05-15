@@ -1,26 +1,60 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <feeds />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import feeds from './pages/feeds/feeds.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    feeds
   }
 }
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+body, html {
+  height: 100%;
+  margin: auto;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+p {
+  margin: 0;
+}
+svg {
+  display: block;
+}
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+.x-container {
+  width: 1200px;
+  margin: 0 auto;
 }
 </style>

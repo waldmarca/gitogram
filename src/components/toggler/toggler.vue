@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import icon from '../icons/variants/triangle.vue'
+import icon from '../../icons/variants/triangle.vue'
 export default {
   components: {
     icon
@@ -31,21 +31,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.button
-  display: inline-flex
-  align-items: center
-  padding: 0
-  .icon
-    width: 10px
-    transform: rotate(180deg)
-  &.active
-    margin-bottom: 22px
-    .icon
-      transform: rotate(0deg)
-  .text
-    font-weight: 500
-    font-size: 14px
-    line-height: 160%
-    margin-right: 7px
-</style>
+<style src="./toggler.scss" lang="scss" scoped></style>

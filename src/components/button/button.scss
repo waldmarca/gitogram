@@ -1,0 +1,36 @@
+.c-button {
+  width: 270px;
+  height: 44px;
+  background: #31AE54;
+  border-radius: 5px;
+
+    &.hover-text:hover {
+        font-family: 'Open Sans';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+
+          &:hover {
+            .btn-text {
+              display: none;
+            }
+          }
+
+        &:after {
+          content: attr(data-hover-text);
+        }
+    }
+
+    &.theme-green:hover {
+      background: #9E9E9E;
+    }
+}
+
+.btn-text {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+}

@@ -22,3 +22,5 @@ export default {
   }
 }
 </script>
+
+<style src="./comment.scss" lang="scss" scoped></style>

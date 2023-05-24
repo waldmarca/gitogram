@@ -1,0 +1,36 @@
+.slider {
+  max-width: 375px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.0001);
+  border: 1px solid #CACACA;
+  .header {
+    border-bottom: 2px solid #CACACA;
+    padding: 10px 15px;
+  }
+  .footer {
+    border-top: 2px solid #CACACA;
+    padding: 30px 50px;
+  }
+  .avatar {
+    margin-top: 10px;
+  }
+
+  .profile-info {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 470px;
+    p {
+      margin: 0;
+    }
+    .img {
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}

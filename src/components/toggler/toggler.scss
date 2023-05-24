@@ -1,0 +1,24 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+
+    &.active {
+      margin-bottom: 20px;
+        .icon {
+          transform: rotate(180deg);
+        }
+  }
+}
+
+.icon {
+  width: 10px;
+  transform: rotate(0deg);
+}
+
+.text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 160%;
+  margin-right: 7px;
+}

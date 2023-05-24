@@ -22,15 +22,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-  .img
-    width: 80px
-    height: 80px
-    border-radius: 50%
-  .avatar
-    margin-bottom: 10px
-  .username
-    font-weight: 400
-    font-size: 12px
-    line-height: 10px
-</style>
+<style src="./storyUserItem.scss" lang="scss" scoped></style>

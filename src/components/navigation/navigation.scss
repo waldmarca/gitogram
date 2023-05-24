@@ -1,0 +1,24 @@
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.logout {
+  cursor: pointer;
+}
+
+.home {
+  cursor: pointer;
+  margin-right: 28px;
+}
+
+.user-photo {
+  cursor: pointer;
+  margin-right: 23.5px;
+}
+
+.img-avatar {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+}

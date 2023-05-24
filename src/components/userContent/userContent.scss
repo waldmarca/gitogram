@@ -1,0 +1,35 @@
+.date {
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .some-comment {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  }
+  
+  .reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 21px;
+  }
+  
+  .comments-item {
+  margin-bottom: 21px;
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .user-post-container {
+    margin: 0 auto;
+    width: 985px;
+    margin-bottom: 30px;
+  }

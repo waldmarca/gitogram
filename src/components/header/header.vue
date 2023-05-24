@@ -18,17 +18,4 @@
 export default {}
 </script>
 
-<style lang="sass" scoped>
-.header
-  margin-bottom: 32px
-  background: #FAFAFA
-  border-bottom: 1px solid #C6C6C8
-  padding: 42px 0px 32px
-
-.content
-  margin-top: 44px
-
-.headline
-  display: flex
-  justify-content: space-between
-</style>
+<style src="./header.scss" lang="scss" scoped></style>

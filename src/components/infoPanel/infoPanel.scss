@@ -1,0 +1,60 @@
+.ratings__star-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #24292E;
+}
+
+.ratings__item-num {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #24292E;
+}
+
+.ratings__item-title {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.ratings__fork-title {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #24292E;
+}
+
+.ratings__list {
+  display: inline-flex;
+}
+
+.ratings__item {
+  display: flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-right: 2px solid rgba(27, 31, 35, 0.15);
+
+    &:nth-child(odd) {
+      background: #FAFBFC;
+      cursor: pointer;
+    }
+
+    &:first-child {
+      border-radius: 10px 0 0 10px;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+}
+
+.ratings__list {
+  border-radius: 10px;
+  border: 1px solid rgba(27,31,35,.15);
+}
+
+
+.ratings__star {
+  margin-right: 6px;
+}

@@ -2,7 +2,7 @@
   <div class="slider">
     <div class="header">
       <Xprogress />
-      <user 
+      <user
       avatar="https://loremflickr.com/300/300"
       username="Josh"
       />

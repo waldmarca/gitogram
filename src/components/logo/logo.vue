@@ -1,13 +1,7 @@
 <template>
-  <div class="logo">
-    <a
-      href="https://loftschool.com"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Icon name="logo" />
-    </a>
-  </div>
+  <button class="logo" @click="$router.push('/')">
+    <Icon name="logo" />
+  </button>
 </template>
 
 <script>
@@ -18,3 +12,5 @@ export default {
   }
 }
 </script>
+
+<style src="./logo.scss" lang="scss" scoped></style>

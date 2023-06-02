@@ -8,27 +8,7 @@
         <user-post-content
         v-bind="getFeedData(item)"
         />
-        <div class="reviews">
-          <toggler @onToggle="toggle" />
-          <div
-            class="comments"
-            v-if="shown"
-          >
-            <ul class="comments-list">
-              <li
-                class="comments-item"
-                v-for="n in 8"
-                :key="n"
-              >
-                <comment
-                  class="some-comment"
-                  text="Lorem ipsum"
-                  username="joshua_l"
-                />
-              </li>
-            </ul>
-          </div>
-        </div>
+        <comments />
         <div class="date">15 may</div>
       </div>
     </div>
@@ -37,27 +17,21 @@
 
 <script>
 import user from '../../components/user/user.vue'
-import toggler from '../../components/toggler/toggler.vue'
-import Comment from '../../components/comment/comment.vue'
+import comments from '../comments/comments.vue'
 import userPostContent from '../userPostContent/userPostContent.vue'
 import * as api from '../../components/api'
 export default {
   components: {
-    toggler,
-    Comment,
     user,
-    userPostContent
+    userPostContent,
+    comments
   },
   data () {
     return {
-      shown: false,
       items: {}
     }
   },
   methods: {
-    toggle (isOpened) {
-      this.shown = isOpened
-    },
     getFeedData (item) {
       return {
         username: item.owner.login,
@@ -71,7 +45,7 @@ export default {
   },
   async created () {
     try {
-      const { data } = await api.trandings.getTrendings()
+      const { data } = await api.trendings.getTrendings()
       this.items = data.items
     } catch (error) {
       console.log(error)

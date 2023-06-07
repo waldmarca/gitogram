@@ -11,6 +11,8 @@
           @next="handleSlide(ndx + 1)"
           @prev="handleSlide(ndx - 1)"
           @onFinish="handleSlide(ndx + 1)"
+          @onFollow="starRepo(trending.id)"
+          @onUnFollow="unStarRepo(trending.id)"
           />
         </li>
       </ul>
@@ -30,7 +32,7 @@ export default {
       type: Number
     }
   },
-  emits: ['onFinish', 'onNext', 'onPrev'],
+  emits: ['onFinish', 'onNext', 'onPrev', 'onFollow'],
   data () {
     return {
       slideNdx: 0,
@@ -53,7 +55,9 @@ export default {
   methods: {
     ...mapActions({
       fetchTrendings: 'trendings/fetchTrendings',
-      fetchReadme: 'trendings/fetchReadme'
+      fetchReadme: 'trendings/fetchReadme',
+      starRepo: 'trendings/starRepo',
+      unStarRepo: 'trendings/unStarRepo'
     }),
     async fetchReadmeForActiveSlide () {
       const { id, owner, name } = this.trendings[this.slideNdx]
@@ -88,7 +92,9 @@ export default {
         id: obj.id,
         avatar: obj.owner?.avatar_url,
         username: obj.owner?.login,
-        content: obj.readme
+        content: obj.readme,
+        following: obj.following,
+        loading: obj.loading
       }
     }
   },

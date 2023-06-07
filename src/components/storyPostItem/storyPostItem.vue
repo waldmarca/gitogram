@@ -19,7 +19,16 @@
         </div>
       </div>
       <div class="button">
-        <xbutton hoverText="Unfollow">Follow</xbutton>
+        <xbutton @click="$emit(data.following ? 'onUnFollow' : 'onFollow')" :theme="buttonTheme">
+          <template #default>
+            <span v-if="data.loading">
+              <Icon name="spinnerBtn" />
+            </span>
+            <span v-else>
+              {{data.following ? 'Unfollow': 'Follow'}}
+            </span>
+          </template>
+          </xbutton>
       </div>
     </div>
     <div class="btns" v-if="active">
@@ -56,8 +65,8 @@ export default {
   props: {
     active: Boolean,
     loading: Boolean,
-    hoverText: {
-      type: String
+    following: {
+      type: Boolean
     },
     btnsShown: {
       type: Array,
@@ -70,6 +79,11 @@ export default {
       type: Object,
       required: true,
       default: () => ({})
+    }
+  },
+  computed: {
+    buttonTheme () {
+      return this.data.following === true ? 'grey' : 'green'
     }
   }
 }

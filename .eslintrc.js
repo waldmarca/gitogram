@@ -13,7 +13,7 @@ module.exports = {
     'vue/multi-word-component-names': 0
   },
   overrides: [{
-    files: ['**/__tests__/*.{j,t}s?(x)', '**/tests/unit/**/*.spec.{j,t}s?(x)', 'src/components/**/*.vue', 'src/pages/feeds/*.vue', 'src/icons/**/*.vue'],
+    files: ['**/__tests__/*.{j,t}s?(x)', '**/tests/unit/**/*.spec.{j,t}s?(x)', 'src/components/**/*.vue', 'src/pages/feeds/*.vue', 'src/icons/**/*.vue', 'src/pages/**/*'],
     env: {
       jest: true
     }

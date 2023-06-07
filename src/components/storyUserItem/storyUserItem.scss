@@ -2,6 +2,10 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
+
+  &:hover {
+    border: 2px solid #A6328D;
+  }
 }
 
 .avatar {

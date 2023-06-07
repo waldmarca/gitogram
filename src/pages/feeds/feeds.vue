@@ -3,7 +3,7 @@
     <Header>
       <template #headline>
         <logo class="logo logo-stories" />
-        <navigation />
+        <navigation :src="user.avatar_url" :username="user.login" />
       </template>
       <template #content>
         <ul class="stories">
@@ -44,7 +44,9 @@ export default {
   },
   computed: {
     ...mapState({
-      trendings: (state) => state.trendings.data
+      trendings: (state) => state.trendings.data,
+      starred: (state) => state.starred.data,
+      user: (state) => state.user.data
     })
   },
   async created () {
@@ -72,11 +74,15 @@ export default {
       }
     },
     ...mapActions({
-      fetchTrendings: 'trendings/fetchTrendings'
+      fetchTrendings: 'trendings/fetchTrendings',
+      fetchStarred: 'starred/fetchStarred',
+      getUser: 'user/getUser'
     })
   },
   mounted () {
     this.fetchTrendings()
+    this.fetchStarred({ limit: 10 })
+    this.getUser()
   }
 }
 </script>

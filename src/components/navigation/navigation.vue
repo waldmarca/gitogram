@@ -5,22 +5,41 @@
     </div>
     <div class="user-photo">
       <img
-        src="https://loremflickr.com/300/300"
+        :src="src"
         class="img-avatar"
-        alt="user photo"
+        :alt="`${username} avatar`"
       />
     </div>
-    <div class="logout">
+    <div @click="logout" class="logout">
       <Icon name="logout" />
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import Icon from '../../icons/icon.vue'
 export default {
   components: {
     Icon
+  },
+  props: {
+    src: {
+      type: String
+    },
+    username: {
+      type: String
+    }
+  },
+  methods: {
+    ...mapActions({
+      logoutAction: 'auth/logout'
+    }),
+    logout () {
+      localStorage.removeItem('token')
+      this.$router.replace({ name: 'auth' })
+      window.location.reload()
+    }
   }
 }
 </script>

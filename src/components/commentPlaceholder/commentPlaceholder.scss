@@ -1,0 +1,19 @@
+.paragraph {
+  height: 100%;
+  width: 100%;
+  .line {
+    height: 22px;
+    background: linear-gradient(270deg, #FFFFFF -50%, rgba(255, 255, 255, 0) 100%), #EAEAEA;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  .line1 {
+    width: 50%;
+  }
+  .line2 {
+    width: 35%;
+  }
+  .line3 {
+    width: 20%;
+  }
+}

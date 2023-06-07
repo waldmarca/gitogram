@@ -1,6 +1,6 @@
 <template>
   <div class="user__post-list">
-    <div class="user-post-container" v-for="item in items" :key="item.id">
+    <div class="user-post-container" v-for="item in starred" :key="item.id">
       <div class="profile-post">
         <user
         v-bind="getFeedData(item)"
@@ -8,8 +8,12 @@
         <user-post-content
         v-bind="getFeedData(item)"
         />
-        <comments />
-        <div class="date">15 may</div>
+        <comments
+        :issues="item.issues?.data"
+        :loading="item.issues?.loading"
+        :date="new Date(item.created_at)"
+        @loadContent="loadIssues({ id: item.id, owner: item.owner.login, repo: item.name })"
+        />
       </div>
     </div>
   </div>
@@ -20,6 +24,7 @@ import user from '../../components/user/user.vue'
 import comments from '../comments/comments.vue'
 import userPostContent from '../userPostContent/userPostContent.vue'
 import * as api from '../../components/api'
+import { mapActions, mapState } from 'vuex'
 export default {
   components: {
     user,
@@ -41,7 +46,19 @@ export default {
         forks: item.forks,
         avatar: item.owner.avatar_url
       }
+    },
+    ...mapActions({
+      fetchStarred: 'starred/fetchStarred',
+      fetchIssues: 'starred/fetchIssuesForRepo'
+    }),
+    loadIssues ({ id, owner, repo }) {
+      this.fetchIssues({ id, owner, repo })
     }
+  },
+  computed: {
+    ...mapState({
+      starred: (state) => state.starred.data
+    })
   },
   async created () {
     try {
@@ -50,6 +67,9 @@ export default {
     } catch (error) {
       console.log(error)
     }
+  },
+  mounted () {
+    this.fetchStarred({ limit: 10 })
   }
 }
 </script>

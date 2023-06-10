@@ -1,6 +1,8 @@
 <template>
   <div class="reviews">
-    <toggler @onToggle="toggle" />
+    <div class="toggler">
+      <toggler @onToggle="toggle" />
+    </div>
     <comment-placeholder v-if="loading" />
     <div
       class="comments"
@@ -37,8 +39,7 @@ export default {
       type: Boolean
     },
     date: {
-      type: Date,
-      required: true
+      type: Date
     },
     issues: {
       type: Array,

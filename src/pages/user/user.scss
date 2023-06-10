@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 120px);
+}
+
+.wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.user {
+  flex: 1;
+  border-right: 1px solid #D3D3D3;
+  padding: 40px 30px 0 0;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 28px;
+  margin-bottom: 36px;
+}
+
+.content {
+  flex: 2;
+  padding: 40px 0 0 74px;
+}
+
+.header {
+  margin-bottom: 0;
+}

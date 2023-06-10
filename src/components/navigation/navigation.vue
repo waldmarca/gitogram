@@ -1,9 +1,9 @@
 <template>
   <div class="user-info">
-    <div class="home">
+    <div class="home" @click="goToHome">
       <Icon name="home" />
     </div>
-    <div class="user-photo">
+    <div class="user-photo" @click="goToUser">
       <img
         :src="src"
         class="img-avatar"
@@ -39,6 +39,12 @@ export default {
       localStorage.removeItem('token')
       this.$router.replace({ name: 'auth' })
       window.location.reload()
+    },
+    goToHome () {
+      this.$router.push('/')
+    },
+    goToUser () {
+      this.$router.push('/user')
     }
   }
 }

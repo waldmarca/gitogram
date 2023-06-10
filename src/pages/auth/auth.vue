@@ -6,7 +6,9 @@
       </div>
       <div class="auth-info">
         <span class="auth-info-text">
-          More than just one repository. This is our digital world.
+          More than just one repository.
+          <br>
+          This is our digital world.
         </span>
       </div>
       <div class="auth-btn">

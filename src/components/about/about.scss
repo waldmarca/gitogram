@@ -1,0 +1,69 @@
+.c-user {
+  display: flex;
+  align-items: center;
+}
+
+.stats {
+  display: flex;
+}
+
+.stats-item {
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.stats-int {
+  margin-right: 6px;
+}
+
+.username {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #262626;
+}
+
+.data {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9E9E9E;
+}
+
+.stats-int {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #262626;
+}
+
+.stats-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.watchers {
+  color: #31AE54;
+  text-decoration: none;
+
+    .stats-title {
+      text-decoration: underline;
+    }
+    &:hover {
+      .stats-title {
+        text-decoration: none;
+      }
+    }
+}
+
+.router-link-exact-active {
+  pointer-events: none;
+  .stats-title {
+    text-decoration: none;
+    color: #404040;
+  }
+}
